@@ -1,0 +1,19 @@
+App\Entity\People:
+  properties:
+    name:
+      - NotBlank: ~
+    lastName:
+      - NotBlank: ~
+    age:
+      - NotBlank: ~
+      - Range:
+                min: 0
+                max: 99
+                minMessage: "Age cannot be less than 0"
+                maxMessage: "Age cannot be greater than 99"
+    salary:
+       - Range:
+                min: 0
+                minMessage: "Salary cannot be less than 0"
+    type:
+      - Choice: { choices: [player, trainer], message: Choose a valid job type (player or trainer). }

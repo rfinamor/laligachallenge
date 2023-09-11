@@ -1,0 +1,10 @@
+App\Form\Model\ClubDto:
+  properties:
+    name:
+      - NotBlank: ~
+    budget:
+      - NotBlank: ~
+      - Range:
+                min: 0
+                minMessage: "Budget cannot be less than 0"
+

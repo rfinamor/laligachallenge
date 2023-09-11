@@ -1,0 +1,10 @@
+App\Entity\Club:
+  attributes:
+    id:
+      groups: ['club']
+    name:
+      groups: ['club']
+    budget:
+      groups: ['club']
+
+

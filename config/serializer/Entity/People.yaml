@@ -1,0 +1,18 @@
+App\Entity\People:
+  attributes:
+    id:
+      groups: ['people']
+    name:
+      groups: ['people']
+    lastName:
+      groups: ['people']
+    age:
+      groups: ['people']
+    salary:
+      groups: ['people']
+    type:
+      groups: ['people']
+    clubId:
+      groups: ['people']
+
+
