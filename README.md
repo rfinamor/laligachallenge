@@ -16,3 +16,8 @@ Load test data on file dump, found in the repository main folder
 
 Start server:
 symfony server:start
+
+Check the postman collection located in the repository main folder
+
+Note:
+File .env was pushed because its a test but you should never push .env files
