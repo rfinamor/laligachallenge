@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "768b3449-b8da-4f9a-9193-7d76fcc6ebd3",
+		"name": "laligatech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17513198",
+		"_collection_link": "https://planetary-astronaut-681665.postman.co/workspace/is~f31384a2-a86e-4d92-973b-7ab1f9d17f39/collection/17513198-768b3449-b8da-4f9a-9193-7d76fcc6ebd3?action=share&source=collection_link&creator=17513198"
+	},
+	"item": [
+		{
+			"name": "Create Club",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"name\": \"club leandro alem\",\r\n        \"budget\": 10000\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/club/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"club",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create People",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"carlos\",\r\n    \"lastName\": \"pepin\",\r\n    \"age\": 28,\r\n    \"clubId\": null,\r\n    \"salary\": 5000,\r\n    \"type\" : \"trainer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/people/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"people",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"people"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "jobType",
+							"value": null,
+							"description": "trainer/player",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/people/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"people",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clubs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/clubs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clubs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Club By id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/club/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"club",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify budget",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"budget\": 50000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/club/1/edit-budget",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"club",
+						"1",
+						"edit-budget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add player/trainer to club",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clubId\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/people/3/addclub",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"people",
+						"3",
+						"addclub"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove player/trainer from club",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/people/1/removeclub",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"people",
+						"1",
+						"removeclub"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Players in club by property",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\":\"name\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/club/1/players?property=name&value=mariano&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"club",
+						"1",
+						"players"
+					],
+					"query": [
+						{
+							"key": "property",
+							"value": "name"
+						},
+						{
+							"key": "value",
+							"value": "mariano"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
